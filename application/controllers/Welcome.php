@@ -20,7 +20,8 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		//this is praveen comment
+		//This is a comment
+		//This is comment 2
 		$this->load->view('login');
 	}
 }
