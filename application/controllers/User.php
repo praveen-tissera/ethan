@@ -15,7 +15,8 @@ Class User extends CI_Controller {
       //echo "categories works";
       $data['message'] = 'This is come for user controler';
       $result_catagories = $this->User_model->get_catagories();
-      print_r($result_catagories);
+      $data['all_catagories'] = $result_catagories;
+      //print_r($result_catagories);
       //var_dump()
       $this->load->view('show_categories',$data);
       //$result_catagories =$this->User_model->get_catagories();
