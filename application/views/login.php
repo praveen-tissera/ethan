@@ -10,5 +10,7 @@
 </head>
 <body>
     <h1>LOGIN PAGE</h1>
+
+    <a href="<?php echo base_url('index.php/User/getCategories') ?>">Click to view all the catagories</a>
 </body>
 </html>
