@@ -22,4 +22,14 @@ Class User extends CI_Controller {
     public function index(){
 		$this->load->view('home');
     }
+
+    public function getCategories(){
+		
+		//$result_catagories =$this->User_model->get_catagories();
+		//print_r($result_catagories);
+		
+		
+		//print_r($data);
+		//$this->load->view('food-menu',$data);
+	}
 }
