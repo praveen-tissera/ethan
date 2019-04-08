@@ -3,7 +3,9 @@ Class User extends CI_Controller {
     public function __construct() {
 		parent::__construct();
 		// Load form validation library
-		$this->load->library('form_validation');
+    $this->load->library('form_validation');
+    //load url library
+		$this->load->helper('url');
 		$this->load->model('User_model');
 		
 		
