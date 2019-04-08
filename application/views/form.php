@@ -10,41 +10,48 @@
 <body>
 
     <div class="container">
-
+        
         <div class="row">
+            <div class="col-sm-12 col-md-6">
+                    <!-- <form action="" method="post">
 
-        <div class="col-12">
-            <!-- <form action="" method="post">
+                    </form> -->
 
-            </form> -->
+                    <?php
+                    // show form errors
+                    if(form_error('school') || form_error('address')){
+                        echo form_error('school','<div class="alert alert-danger">','</div>');
+                        echo form_error('address','<div class="alert alert-danger">','</div>');
+                    }
 
-            <?php
-            // show form errors
-            if(form_error('school') || form_error('address')){
-                echo form_error('school','<div class="alert alert-danger">','</div>');
-                echo form_error('address','<div class="alert alert-danger">','</div>');
-            }
+                    ?>
+                    <?php
+                    echo form_open('user/fromSubmit');
+                    ?>
+                        <input type="text" name="school"><br><br>
+                        <textarea name="address" cols="30" rows="10"></textarea><br><br>
+                        <input type="submit" class="btn btn-primary" value="Save this form" name="submit">
+                    <?php 
+                    echo form_close();
+                    ?>
 
-            ?>
-            <?php
-                echo form_open('user/fromSubmit');
-            ?>
-                <input type="text" name="school"><br><br>
-                <textarea name="address" cols="30" rows="10"></textarea><br><br>
-                <input type="submit" class="btn btn-primary" value="Save this form" name="submit">
-                <?php 
-            echo form_close();
-            ?>
-        
+
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <h1>second coloum</h1>
+
+            </div>
+               
         </div>
+                
 
-        
 
-
-        </div>
 
     </div>
 
-    
+   
+
+
+
 </body>
 </html>
