@@ -12,5 +12,6 @@
     <h1>LOGIN PAGE</h1>
 
     <a href="<?php echo base_url('index.php/User/getCategories') ?>">Click to view all the catagories</a>
+    <a href="<?php echo base_url('index.php/User/getForm') ?>">Click to view form</a>
 </body>
 </html>

@@ -2,7 +2,8 @@
 Class User extends CI_Controller {
     public function __construct() {
 		parent::__construct();
-		
+		// Load form validation library
+		$this->load->library('form_validation');
 		$this->load->model('User_model');
 		
 		
@@ -25,5 +26,17 @@ Class User extends CI_Controller {
       
       //print_r($data);
       //$this->load->view('food-menu',$data);
-	}
+  }
+  public function getForm(){
+    $this->load->view('form');
+  }
+  public function fromSubmit(){
+    $this->form_validation->set_rules('school', 'School', 'trim|required');
+    $this->form_validation->set_rules('address', 'Home Address', 'trim|required');
+    if($this->form_validation->run() == FALSE){
+      $this->load->view('form');
+    }else{
+      print_r($_POST);
+    }
+  }
 }
